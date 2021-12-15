@@ -2,27 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <div class="head">
-      <span id="logo_01"> <img src="data/img/logo.svg" alt=""> </span>
-    </div>
-    <div class="search_bar">
-      <form class="" action="index.html" method="post">
-        <input id="search" type="search" name="" value="Search">
-        <span class="search_container">
-          <img id="search_icon" src="data/img/search.svg" alt="">
+  <div class="head">
+    <span id="logo_01"> <img src="data/img/logo.svg" alt=""> </span>
+  </div>
+  <div class="search_bar">
+
+    <form class="" action="index.html" method="post">
+      <div class="search-wrapper">
+        <input id="search" type="search" name="" placeholder="Search">
+        <span id="search_container">
+          <img class="search-bar-icon" src="data/img/search.svg" alt="">
         </span>
-        <span class="filter_container">
-          <img id="filter_icon" src="data/img/filter.svg" alt="">
+        <span id="filter_container" onclick="filterOpen()">
+          <img class="search-bar-icon" src="data/img/filter.svg" alt="">
         </span>
+      </div>
+
 
       <div class="hidden">
         <span>Branch <input type="text" name="" value=""></span>
@@ -48,6 +52,7 @@
   </div>
 
   <script src="/js/script.js"></script>
+  <script src="/js/fetch.js"></script>
 </body>
 
 </html>
