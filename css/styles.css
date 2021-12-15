@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   .head{
     height: 14vh;
     width: 100vw;
@@ -14,11 +15,40 @@
   }
   .head img{
     height: 8vh;
-    
+
   }
 
+  .search_bar{
+    background-color: #013976;
+    width: 40vw;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
 
+  }
+  .hidden{
+    /* display: none; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+  }
+  #search{
+    height: 10vh;
+    width: 35vw;
+    padding-top: 0; 
+  }
+  #search_icon{
+    height: 7vh;
+    padding: 1vh;
+  }
+  #filter_icon{
+    height: 7vh;
+    padding: 1vh;
+  }
 
 
 }
