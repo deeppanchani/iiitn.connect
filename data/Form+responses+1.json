@@ -1,0 +1,38 @@
+[
+    {   
+        "Timestamp":"15/12/2021 15:33:52",
+        "Name":"sujal barsaiyan",
+        "College Email ID":"bt20ece098@iiitn.ac.in",
+        "Branch":"ECE",
+        "College Year":"2nd Year",
+        "Mastered Skills":"Web Development, UI Design, UX Design, Graphics Design",
+        "LinkedIn ID Link":"https://www.linkedin.com/in/sujal-barsaiyan-51a1b811b/",
+        "Instagram ID Link":"https://www.instagram.com/bettercallsujal/",
+        "GitHub ID Link (Optional)":"https://github.com/couldntfindabetterusername"
+    },
+    {
+        "Timestamp":"15/12/2021 15:38:05",
+        "Name":"Deep Panchani",
+        "College Email ID":"bt20cse105@iiitn.ac.in",
+        "Branch":"CSE",
+        "College Year":"2nd Year",
+        "Mastered Skills":"Web Development, UI Design, UX Design, Competitive Programming",
+        "LinkedIn ID Link":"https://www.linkedin.com/in/deep-panchani-7805861b5/",
+        "Instagram ID Link":"https://www.instagram.com/deepanchani/",
+        "GitHub ID Link (Optional)":"https://github.com/deeppanchani",
+        "Other Social Links (Optional)":"",
+        "Project Links (Optional)":"",
+        "Profile Photo":"https://drive.google.com/open?id=1s1Jw1GkHW9vOBVRAMNjX1DdGJMuwn--B"
+    },
+    {
+        "Timestamp":"15/12/2021 15:39:48",
+        "Name":"Yogesh Sewada",
+        "College Email ID":"bt20cse179@gmail.com",
+        "Branch":"CSE",
+        "College Year":"2nd Year",
+        "Mastered Skills":"UI Design, Graphics Design",
+        "LinkedIn ID Link":"https://www.linkedin.com/in/yogesh-sewada-83aaa3201/",
+        "Instagram ID Link":"https://instagram.com/iuybketvsg?utm_medium=copy_link",
+        "GitHub ID Link (Optional)":"https://github.com/SakataGintoki0"
+    }
+]
