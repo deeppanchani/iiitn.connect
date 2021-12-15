@@ -12,6 +12,10 @@
     display: flex;
     justify-content: center;
   }
+  .head img{
+    height: 8vh;
+    
+  }
 
 
 
