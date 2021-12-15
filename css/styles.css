@@ -1,0 +1,20 @@
+@media (min-width:501px){
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .head{
+    height: 14vh;
+    width: 100vw;
+    padding: 2vh;
+    background-color: #013976;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+
+
+}
