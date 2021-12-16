@@ -5,7 +5,7 @@
 }
 
 .head {
-  height: 14vh;
+  height: 8vh;
   width: 100vw;
   padding: 2vh;
   background-color: #013976;
@@ -13,7 +13,7 @@
   justify-content: center;
 }
 .head img {
-  height: 8vh;
+  height: 4vh;
 }
 
 .search_bar {
@@ -42,18 +42,20 @@ form {
 }
 
 #search_container {
-  padding: 10px;
+  height: 45px;
+  padding: 7.5px;
   background: #8dbce8;
   border: 2px solid #8dbce8;
 }
 #filter_container {
-  padding: 10px;
+  height: 45px;
+  padding: 9.32px;
   background: #013976;
   border: 2px solid #013976;
 }
 #search {
   width: 100%;
-  height: 53px;
+  height: 45px;
   padding: 13px;
   font-size: 20px;
   border: 2px solid #8dbce8;
@@ -61,5 +63,8 @@ form {
   outline: none;
 }
 .search-bar-icon {
-  height: 25px;
+  height: 27px;
+}
+.filter-icon {
+  height: 24.34px;
 }
