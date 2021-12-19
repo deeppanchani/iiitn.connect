@@ -19,6 +19,7 @@
 .search_bar {
   width: 600px;
   border-radius: 5px;
+  /* border-bottom-left-radius: 0; */
   overflow: hidden;
   margin: auto;
   margin-top: 40px;
@@ -34,12 +35,7 @@ form {
   display: flex;
   align-items: center;
 }
-.hidden {
-  display: none;
-  color: #fff;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 #search_container {
   height: 45px;
@@ -52,6 +48,7 @@ form {
   padding: 9.32px;
   background: #013976;
   border: 2px solid #013976;
+
 }
 #search {
   width: 100%;
@@ -67,4 +64,61 @@ form {
 }
 .filter-icon {
   height: 24.34px;
+}
+
+.hidden {
+  display: none;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #013976;
+  height: 210px;
+  font-size: 1.4rem;
+
+}
+
+.hidden div{
+  width: 100%;
+  margin-left: 150px;
+  display: flex;
+}
+.hidden div span{
+  display: block;
+  width: 75px;
+  margin-top: 15px;
+}
+.hidden input{
+  height: 30px;
+  width: 275px;
+  margin-left: 70px;
+  /* margin-right: 100px; */
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+#cancel{
+  width: 130px;
+  height: 35px;
+
+  margin-left: 75px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background: #FEFFB1;
+  color: #013976;
+
+}
+#apply{
+  width: 130px;
+  height: 35px;
+  margin-left: 50px;
+  /* margin-right: ; */
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background-color: #FEF200;
+  color: #013976;
+
 }
