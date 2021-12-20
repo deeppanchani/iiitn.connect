@@ -43,12 +43,26 @@ form {
   background: #8dbce8;
   border: 2px solid #8dbce8;
 }
+#search_container:hover{
+  height: 45px;
+  padding: 7.5px;
+  background: #013976;
+  border: 2px solid #013976;
+}
+
+
 #filter_container {
   height: 45px;
   padding: 9.32px;
   background: #013976;
   border: 2px solid #013976;
+}
 
+#filter_container:hover{
+  height: 45px;
+  padding: 9.32px;
+  background: #8dbce8;
+  border: 2px solid #8dbce8;
 }
 #search {
   width: 100%;
@@ -87,6 +101,7 @@ form {
   display: block;
   width: 75px;
   margin-top: 15px;
+  font-family: 'Public Sans', sans-serif;
 }
 .hidden input{
   height: 30px;
@@ -108,17 +123,43 @@ form {
   border-radius: 17.5px;
   background: #FEFFB1;
   color: #013976;
+  font-size: 1.1rem;
+}
 
+#cancel:hover{
+  width: 130px;
+  height: 35px;
+  font-size: 1.1rem;
+  margin-left: 75px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background: #FEF200;
+  color: #013976;
+  cursor: pointer;
 }
 #apply{
   width: 130px;
   height: 35px;
   margin-left: 50px;
-  /* margin-right: ; */
+
   margin-top: 20px;
   border: none;
   border-radius: 17.5px;
   background-color: #FEF200;
   color: #013976;
+  font-size: 1.1rem;
+}
 
+#apply:hover{
+  width: 130px;
+  height: 35px;
+  margin-left: 50px;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background-color: #FEFFB1;
+  color: #013976;
+  cursor: pointer;
 }
