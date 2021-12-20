@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Public Sans';
 }
 
 .head {
@@ -101,14 +102,13 @@ form {
 #cancel{
   width: 130px;
   height: 35px;
-
   margin-left: 75px;
   margin-top: 20px;
   border: none;
   border-radius: 17.5px;
   background: #FEFFB1;
   color: #013976;
-
+  font-size: 0.75em;
 }
 #apply{
   width: 130px;
@@ -120,5 +120,22 @@ form {
   border-radius: 17.5px;
   background-color: #FEF200;
   color: #013976;
+  font-size: 0.75em;
+}
+
+@media (max-width: 500px) {
+  
+  .head {
+    height: 80px;
+    padding: 20px;
+    background-color: #013976;
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    float:none !important;
+  }
+  .head img {
+    height: 40px;
+  }
 
 }
