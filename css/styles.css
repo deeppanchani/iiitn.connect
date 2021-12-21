@@ -1,10 +1,15 @@
-@media (min-width: 501px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+@media (min-width: 501px) {
   .head {
     height: 14vh;
     width: 100vw;
@@ -63,5 +68,18 @@
   }
   .search-bar-icon {
     height: 25px;
+  }
+
+  .cards-wrapper {
+    margin-left: 100px;
+  }
+  .heading-wrapper {
+    margin: 30px 0 20px 0;
+  }
+  .cards-category {
+    color: #013976;
+    font-family: "Public Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
   }
 }
