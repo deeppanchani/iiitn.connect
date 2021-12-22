@@ -108,7 +108,7 @@ form {
   border-radius: 17.5px;
   background: #FEFFB1;
   color: #013976;
-  font-size: 0.75em;
+  font-size: 0.85em;
 }
 #apply{
   width: 130px;
@@ -120,10 +120,10 @@ form {
   border-radius: 17.5px;
   background-color: #FEF200;
   color: #013976;
-  font-size: 0.75em;
+  font-size: 0.85em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   
   .head {
     height: 80px;
@@ -137,5 +137,70 @@ form {
   .head img {
     height: 40px;
   }
+
+  .search_bar {
+    width: 300px;
+    border-radius: 5px;
+    /* border-bottom-left-radius: 0; */
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+  }
+  
+.hidden {
+  display: none;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #013976;
+  height: 210px;
+  font-size: 1.4rem;
+
+}
+
+.hidden div{
+  width: 100%;
+  margin-left: 150px;
+  display: flex;
+}
+.hidden div span{
+  display: block;
+  width: 75px;
+  margin-top: 15px;
+}
+.hidden input{
+  height: 30px;
+  width: 275px;
+  margin-left: 70px;
+  /* margin-right: 100px; */
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+#cancel{
+  width: 130px;
+  height: 35px;
+  margin-left: 75px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background: #FEFFB1;
+  color: #013976;
+  font-size: 0.85em;
+}
+#apply{
+  width: 130px;
+  height: 35px;
+  margin-left: 50px;
+  /* margin-right: ; */
+  margin-top: 20px;
+  border: none;
+  border-radius: 17.5px;
+  background-color: #FEF200;
+  color: #013976;
+  font-size: 0.85em;
+}
 
 }
