@@ -5,9 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/data/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="data/img/favicon.png" type="image/x-icon">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+  <!-- css links -->
   <link rel="stylesheet" href="./css/styles.css">
   <title>IIITN Connect</title>
+  <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
 </head>
 
 <body>
@@ -24,25 +30,31 @@
           <img class="search-bar-icon" src="data/img/search.svg" alt="">
         </span>
         <span id="filter_container" onclick="filterOpen()">
-          <img class="search-bar-icon" src="data/img/filter.svg" alt="">
+          <img class="filter-icon" src="data/img/filter.svg" alt="">
         </span>
       </div>
 
 
       <div class="hidden">
-        <span>Branch <input type="text" name="" value=""></span>
+        <div>
+            <span>Branch</span> <input type="text" name="" value="">
+        </div>
 
-        <br>
-        <span>Year <input type="text" name="" value=""></span>
 
-        <br>
-        <span>Skills <input type="text" name="" value=""></span>
+        <div>
+          <span>Year</span><input type="text" name="" value="">
+        </div>
 
-        <br>
-        <span>
-          <input type="button" name="" value="Cancel">
-          <input type="button" name="" value="Apply">
-        </span>
+
+        <div>
+          <span>Skills</span><input type="text" name="" value="">
+        </div>
+
+
+        <div>
+          <input id="cancel" type="button" name="" value="Cancel">
+          <input id="apply" type="button" name="" value="Apply">
+        </div>
 
       </div>
 
@@ -51,6 +63,7 @@
 
 
   </div>
+
 
   <section class="cards-wrapper">
     <div class="cards-container" id="development">
@@ -91,8 +104,9 @@
     </div>
   </section>
 
-  <script src="/js/script.js"></script>
-  <script src="/js/fetch.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/fetch.js"></script>
+
 </body>
 
 </html>
