@@ -52,8 +52,8 @@ form {
 #search_container:hover{
   height: 45px;
   padding: 7.5px;
-  background: #013976;
-  border: 2px solid #013976;
+  background: #62A3DF;
+  border: 2px solid #62A3DF;
 }
 
 #filter_container {
@@ -66,8 +66,8 @@ form {
 #filter_container:hover{
   height: 45px;
   padding: 9.32px;
-  background: #8dbce8;
-  border: 2px solid #8dbce8;
+  background: #0151A7;
+  border: 2px solid #0151A7;
 }
 
 #search {
@@ -214,32 +214,34 @@ form {
     align-items: center;
   }
   
-.hidden {
-  display: none;
-  color: #fff;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: #013976;
-  height: 210px;
-  font-size: 1.4rem;
-
+  .hidden {
+    display: none;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #013976;
+    height: 210px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
-.hidden div{
-  width: 100%;
-  margin-left: 150px;
+.hidden div {
+  width: 300px;
+  margin-left: 30px;
   display: flex;
 }
-.hidden div span{
+.hidden div span {
   display: block;
   width: 75px;
   margin-top: 15px;
+  font-size: 20px;
 }
-.hidden input{
+.hidden input {
   height: 30px;
-  width: 275px;
-  margin-left: 70px;
+  width: 190px;
+  margin-left: 5px;
   /* margin-right: 100px; */
   margin-top: 15px;
   border-radius: 5px;
@@ -256,26 +258,12 @@ form {
   padding: 11.82px;
 }
 
-#filter_container:hover{
-  height: 50px;
-  padding: 10px;
-  background: #8dbce8;
-  border: 2px solid #8dbce8;
-  border-radius: 0px 5px 5px 0px;
-}
 
 #search_container {
   height: 50px;
   background: #8dbce8;
   border: 2px solid #8dbce8;
   padding: 11px;
-}
-
-#search_container:hover{
-  height: 50px;
-  padding: 11px;
-  background: #013976;
-  border: 2px solid #013976;
 }
 
 #search {
