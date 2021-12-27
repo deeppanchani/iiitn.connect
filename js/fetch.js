@@ -1,3 +1,57 @@
+function singlePersonHandler(person) {
+  console.log(typeof person, person);
+  const section = document.getElementById("single-person");
+  const cardsSection = document.getElementById("cards-wrapper");
+
+  const { Name, Branch } = person;
+  const CollegeEmailID = person["College Email ID"];
+  const CollegeYear = person["College Year"];
+  const MasteredSkills = person["Mastered Skills"].split(", ");
+
+  let ProfilePhoto = "https://source.unsplash.com/random5";
+  // if (person["Profile Photo"]) {
+  //   ProfilePhoto = person["Profile Photo"];
+  // }
+
+  const LinkedInID = person["LinkedIn ID Link"];
+  const InstagramID = person["Instagram ID Link"];
+  let Profiles = [LinkedInID, InstagramID];
+  if (person["GitHub ID Link (Optional)"]) {
+    const GithubID = person["GitHub ID Link (Optional)"];
+    Profiles = [...Profiles, GithubID];
+  }
+  if (person["Other Social Links (Optional)"]) {
+    const OtherID = person["Other Social Links (Optional)"];
+    Profiles = [...Profiles, OtherID];
+  }
+
+  if (person["Project Links (Optional)"]) {
+    const ProjectLinks = person["Project Links (Optional)"];
+    console.log(ProjectLinks);
+  }
+
+  cardsSection.style.display = "none";
+  section.style.display = "block";
+
+  section.innerHTML += `<div class='single-person-wrapper'>
+  <div class='left-section'>
+  <div class='person-img' style='background-image:url(${ProfilePhoto})'></div>
+  <div class='person-profiles'>
+  <div class='section-heading'>Profiles:</div>
+  <div class='person-profiles-section'>${Profiles}</div>
+  </div>
+  </div>
+  <div class='right-section'>
+  <span class='person-name'>${Name}</span>
+  <span class='person-year-branch'>${CollegeYear + Branch}</span>
+  <div class='section-heading'>Field(s) Of Specialization:</div>
+  <div class='skills-section'></div>
+  <div class='section-heading'>Previous Work(s):</div>
+  <div class='previous-work-section'></div>
+  </div>
+  </div>`;
+}
+
 function arrayMapping(array, arrayContainer, arrayContainerHTML) {
   array.map((person) => {
     const { Name, Branch } = person;
@@ -5,27 +59,10 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
     const CollegeYear = person["College Year"];
     const MasteredSkills = person["Mastered Skills"].split(", ");
 
-    const LinkedInID = person["LinkedIn ID Link"];
-    const InstagramID = person["Instagram ID Link"];
-    let Profiles = [LinkedInID, InstagramID];
-    if (person["GitHub ID Link (Optional)"]) {
-      const GithubID = person["GitHub ID Link (Optional)"];
-      Profiles = [...Profiles, GithubID];
-    }
-
-    if (person["Other Social Links (Optional)"]) {
-      const OtherID = person["Other Social Links (Optional)"];
-      Profiles = [...Profiles, OtherID];
-    }
-
     let ProfilePhoto = "https://source.unsplash.com/random5";
     // if (person["Profile Photo"]) {
     //   ProfilePhoto = person["Profile Photo"];
     // }
-    if (person["Project Links (Optional)"]) {
-      const ProjectLinks = person["Project Links (Optional)"];
-      console.log(ProjectLinks);
-    }
 
     let skillsHTML = "";
     MasteredSkills.forEach((skill) => {
@@ -40,7 +77,9 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
       <div class='skills'>
       ${skillsHTML}
       </div>
-      <button class='details-button'>DETAILS</button>
+      <button class='details-button' onclick='singlePersonHandler(${JSON.stringify(
+        person
+      )})'>DETAILS</button>
       </div></div>`;
   });
 

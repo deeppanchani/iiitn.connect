@@ -169,7 +169,7 @@ form {
   font-size: 0.85em;
 }
 
-.cards-wrapper {
+#cards-wrapper {
   margin-left: 100px;
 }
 .heading-wrapper {
@@ -242,6 +242,11 @@ form {
   background: #fef200;
   border: unset;
   letter-spacing: 4px;
+  cursor: pointer;
+}
+
+#single-person {
+  display: none;
 }
 
 @media (max-width: 650px) {
