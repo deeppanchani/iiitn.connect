@@ -1,10 +1,9 @@
 function arrayMapping(array, arrayContainer, arrayContainerHTML) {
   array.map((person) => {
-    console.log(person["Mastered Skills"]);
     const { Name, Branch } = person;
     const CollegeEmailID = person["College Email ID"];
     const CollegeYear = person["College Year"];
-    const MasteredSkills = person["Mastered Skills"];
+    const MasteredSkills = person["Mastered Skills"].split(", ");
 
     const LinkedInID = person["LinkedIn ID Link"];
     const InstagramID = person["Instagram ID Link"];
@@ -27,12 +26,21 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
       const ProjectLinks = person["Project Links (Optional)"];
       console.log(ProjectLinks);
     }
-    arrayContainerHTML += `<div class='card'><div class='pfp' style='background-image:url(${ProfilePhoto});width:200px;height:200px'></div><div class='info'>
+
+    let skillsHTML = "";
+    MasteredSkills.forEach((skill) => {
+      skillsHTML += `<span class='skill'>${skill}</span>`;
+    });
+
+    arrayContainerHTML += `<div class='card'>
+    <div class='pfp' style='background-image:url(${ProfilePhoto});background-size:cover;background-position:center;'></div>
+    <div class='info'>
       <h1>${Name}</h1>
       <h3>${CollegeYear + " " + Branch}</h3>
       <div class='skills'>
-      ${MasteredSkills}
+      ${skillsHTML}
       </div>
+      <button class='details-button'>DETAILS</button>
       </div></div>`;
   });
 
