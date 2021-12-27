@@ -33,7 +33,8 @@ function singlePersonHandler(person) {
   cardsSection.style.display = "none";
   section.style.display = "block";
 
-  section.innerHTML += `<div class='single-person-wrapper'>
+  section.innerHTML = `<span class="close-section" onclick="closeSinglePersonSection()">close</span>
+  <div class='single-person-wrapper'>
   <div class='left-section'>
   <div class='person-img' style='background-image:url(${ProfilePhoto})'></div>
   <div class='person-profiles'>
