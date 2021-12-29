@@ -36,23 +36,59 @@
 
       <div class="hidden">
         <div>
-          <span>Branch</span> <input type="text" name="" value="">
+          <label for="branch-list">Branch</label>
+          <div class="filter-option-list">
+            <select name="branch-list" id="branch-list">
+              <option value="" selected>Select a branch</option>
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+            </select>
+          </div>
         </div>
 
 
         <div>
-          <span>Year</span><input type="text" name="" value="">
+          <label for="year-list">Year</label>
+          <div class="filter-option-list">
+            <select name="year-list" id="year-list">
+              <option value="" selected>Select a year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+
+            </select>
+          </div>
         </div>
 
 
         <div>
-          <span>Skills</span><input type="text" name="" value="">
+          <label for="skills-list">Skills</label>
+          <div class="filter-option-list">
+            <select name="skills-list" id="skills-list">
+              <option value="" selected>Select a skill</option>
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+              <option value="Game Development">Game Development</option>
+              <option value="AR/VR/XR">AR/VR/XR</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="AI">AI</option>
+              <option value="Data Science">Data Science</option>
+              <option value="UI Design">UI Design</option>
+              <option value="UX Design">UX Design</option>
+              <option value="UX Design">UX Design</option>
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Competitive Programming">Competitive Programming</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
 
 
-        <div>
-          <input id="cancel" type="button" name="" value="Cancel">
-          <input id="apply" type="button" name="" value="Apply">
+        <div id="filter-buttons-wrapper">
+          <input class='filter-enter-button' id="cancel" type="button" name="" value="Cancel" onclick="cancelHandler()">
+          <input class='filter-enter-button' id="apply" type="button" name="" value="Apply">
         </div>
 
       </div>

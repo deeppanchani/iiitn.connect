@@ -1,6 +1,7 @@
 function singlePersonHandler(person) {
   console.log(typeof person, person);
   const section = document.getElementById("single-person");
+  const searchBar = document.getElementsByClassName("search_bar")[0];
   const cardsSection = document.getElementById("cards-wrapper");
 
   const { Name, Branch } = person;
@@ -31,6 +32,7 @@ function singlePersonHandler(person) {
   }
 
   cardsSection.style.display = "none";
+  searchBar.style.display = "none";
   section.style.display = "block";
 
   section.innerHTML = `<span class="close-section" onclick="closeSinglePersonSection()">close</span>
@@ -188,6 +190,67 @@ const fetchURL = async () => {
   arrayMapping(otherCards, otherCardsContainer, otherCardsContainerHTML);
 
   console.log(data);
+
+  document.getElementById("apply").addEventListener("click", () => {
+    const branchValue = document.getElementById("branch-list").value;
+    const yearValue = document.getElementById("year-list").value;
+    const skillsValue = document.getElementById("skills-list").value;
+
+    let branchArray, yearArray, skillArray, filteredArray;
+
+    if (branchValue || yearValue || skillsValue) {
+      if (branchValue) {
+        branchArray = data.filter((person) => person.Branch === branchValue);
+        if (yearValue) {
+          yearArray = branchArray.filter(
+            (person) => person["College Year"] === yearValue
+          );
+          if (skillsValue) {
+            skillArray = yearArray.filter((person) =>
+              person["Mastered Skills"].includes(skillsValue)
+            );
+            filteredArray = skillArray;
+          } else {
+            filteredArray = yearArray;
+          }
+        } else {
+          if (skillsValue) {
+            skillArray = branchArray.filter((person) =>
+              person["Mastered Skills"].includes(skillsValue)
+            );
+            filteredArray = skillArray;
+          } else {
+            filteredArray = branchArray;
+          }
+        }
+      } else {
+        if (yearValue) {
+          yearArray = data.filter(
+            (person) => person["College Year"] === yearValue
+          );
+          if (skillsValue) {
+            skillArray = yearArray.filter((person) =>
+              person["Mastered Skills"].includes(skillsValue)
+            );
+            filteredArray = skillArray;
+          } else {
+            filteredArray = yearArray;
+          }
+        } else {
+          if (skillsValue) {
+            filteredArray = data.filter((person) =>
+              person["Mastered Skills"].includes(skillsValue)
+            );
+          }
+        }
+      }
+
+      console.log(filteredArray);
+    } else {
+      console.log("no");
+    }
+    console.log(branchValue, yearValue, skillsValue);
+  });
 };
 
 fetchURL();
