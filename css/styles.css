@@ -221,6 +221,74 @@ form {
 
 #single-person {
   display: none;
+  position: relative;
+}
+.close-section {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+.single-person-wrapper {
+  display: flex;
+  width: 800px;
+  margin: 100px auto;
+  position: relative;
+}
+.person-img {
+  width: 300px;
+  height: 300px;
+}
+.section-heading {
+  font-size: 30px;
+  color: #013976;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.person-profiles-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.social-media-icon {
+  width: 40px;
+  height: 40px;
+  background: #444;
+  border-radius: 8px;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.person-name {
+  font-size: 40px;
+  font-weight: 600;
+  color: #013976;
+  text-transform: capitalize;
+}
+.person-year-branch {
+  font-size: 24px;
+  color: #8dbce8;
+  margin-top: 10px;
+}
+.person-skill {
+  display: inline-block;
+  color: #002e60;
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  background: #8dbce8;
+  margin: 0 10px 10px 0;
+  border: 2px solid #002e60;
+}
+
+#filtered-cards-wrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 40px 150px;
+}
+#filtered-cards-wrapper .cards {
+  margin: auto;
 }
 
 @media (max-width: 650px) {
