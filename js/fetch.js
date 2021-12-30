@@ -3,11 +3,18 @@ function singlePersonHandler(person) {
   const section = document.getElementById("single-person");
   const searchBar = document.getElementsByClassName("search_bar")[0];
   const cardsSection = document.getElementById("cards-wrapper");
+  const filteredCardsSection = document.getElementById(
+    "filtered-cards-wrapper"
+  );
 
   const { Name, Branch } = person;
   const CollegeEmailID = person["College Email ID"];
   const CollegeYear = person["College Year"];
   const MasteredSkills = person["Mastered Skills"].split(", ");
+  let skillsHTML = "";
+  MasteredSkills.forEach((skill) => {
+    skillsHTML += `<span class='person-skill'>${skill}</span>`;
+  });
 
   let ProfilePhoto = "https://source.unsplash.com/random5";
   // if (person["Profile Photo"]) {
@@ -16,14 +23,15 @@ function singlePersonHandler(person) {
 
   const LinkedInID = person["LinkedIn ID Link"];
   const InstagramID = person["Instagram ID Link"];
-  let Profiles = [LinkedInID, InstagramID];
+  let socialLinksHTML = `<a href='${LinkedInID}' class='social-media-icon'></a><a href='${InstagramID}' class='social-media-icon'></a>`;
+
   if (person["GitHub ID Link (Optional)"]) {
     const GithubID = person["GitHub ID Link (Optional)"];
-    Profiles = [...Profiles, GithubID];
+    socialLinksHTML += `<a href='${GithubID}' class='social-media-icon'></a>`;
   }
   if (person["Other Social Links (Optional)"]) {
     const OtherID = person["Other Social Links (Optional)"];
-    Profiles = [...Profiles, OtherID];
+    socialLinksHTML += `<a href='${OtherID}' class='social-media-icon'></a>`;
   }
 
   if (person["Project Links (Optional)"]) {
@@ -33,22 +41,23 @@ function singlePersonHandler(person) {
 
   cardsSection.style.display = "none";
   searchBar.style.display = "none";
+  filteredCardsSection.style.display = "none";
   section.style.display = "block";
 
-  section.innerHTML = `<span class="close-section" onclick="closeSinglePersonSection()">close</span>
-  <div class='single-person-wrapper'>
+  section.innerHTML = `<div class='single-person-wrapper'>
+  <span class="close-section" onclick="closeSinglePersonSection()">close</span>
   <div class='left-section'>
-  <div class='person-img' style='background-image:url(${ProfilePhoto})'></div>
+  <div class='person-img' style='background-image:url(${ProfilePhoto});background-size:cover;background-position:center;'></div>
   <div class='person-profiles'>
   <div class='section-heading'>Profiles:</div>
-  <div class='person-profiles-section'>${Profiles}</div>
+  <div class='person-profiles-section'>${socialLinksHTML}</div>
   </div>
   </div>
   <div class='right-section'>
   <span class='person-name'>${Name}</span>
-  <span class='person-year-branch'>${CollegeYear + Branch}</span>
+  <span class='person-year-branch'>${CollegeYear + " " + Branch}</span>
   <div class='section-heading'>Field(s) Of Specialization:</div>
-  <div class='skills-section'></div>
+  <div class='skills-section'>${skillsHTML}</div>
   <div class='section-heading'>Previous Work(s):</div>
   <div class='previous-work-section'></div>
   </div>
@@ -196,6 +205,11 @@ const fetchURL = async () => {
     const yearValue = document.getElementById("year-list").value;
     const skillsValue = document.getElementById("skills-list").value;
 
+    const filteredArrayContainer = document.getElementById(
+      "filtered-cards-wrapper"
+    );
+    let filteredArrayHTML = "";
+
     let branchArray, yearArray, skillArray, filteredArray;
 
     if (branchValue || yearValue || skillsValue) {
@@ -244,6 +258,10 @@ const fetchURL = async () => {
           }
         }
       }
+
+      document.getElementById("cards-wrapper").style.display = "none";
+      filteredArrayContainer.style.display = "grid";
+      arrayMapping(filteredArray, filteredArrayContainer, filteredArrayHTML);
 
       console.log(filteredArray);
     } else {
