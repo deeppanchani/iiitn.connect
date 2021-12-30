@@ -146,6 +146,7 @@ form {
 #cards-wrapper {
   margin-left: 100px;
 }
+
 .heading-wrapper {
   margin: 30px 0 20px 0;
 }
@@ -157,9 +158,14 @@ form {
 }
 .cards {
   display: flex;
+  overflow-x: auto;
+}
+.cards::-webkit-scrollbar {
+  width: 0;
 }
 .card {
-  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
   height: 525px;
   margin-right: 60px;
   border-radius: 10px;
