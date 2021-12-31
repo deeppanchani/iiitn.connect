@@ -83,13 +83,13 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
     }
     shuffle(MasteredSkills);
     MasteredSkills.forEach((skill) => {
-      skillsHTML += `<span class='skill'>${skill}</span>`;
+      skillsHTML += `<span class='skill' title='${skill}'>${skill}</span>`;
     });
 
     arrayContainerHTML += `<div class='card'>
     <div class='pfp' style='background-image:url(${ProfilePhoto});background-size:cover;background-position:center;'></div>
     <div class='info'>
-      <h1>${Name}</h1>
+      <h1 title='${Name}'>${Name}</h1>
       <h3>${CollegeYear + " " + Branch}</h3>
       <div class='skills'>
       ${skillsHTML}
@@ -289,8 +289,10 @@ const fetchURL = async () => {
         return (
           person.Name.toLowerCase().includes(input.toLowerCase()) ||
           person.Branch.toLowerCase().includes(input.toLowerCase()) ||
-          person["College Year"].includes(input.toLowerCase()) ||
-          person["Mastered Skills"].includes(input.toLowerCase()) ||
+          person["College Year"].toLowerCase().includes(input.toLowerCase()) ||
+          person["Mastered Skills"]
+            .toLowerCase()
+            .includes(input.toLowerCase()) ||
           (person["Project Links (Optional)"] === undefined
             ? false
             : person["Project Links (Optional)"].includes(input.toLowerCase()))
