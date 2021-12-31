@@ -316,6 +316,36 @@ form {
   margin: auto;
 }
 
+footer {
+  background: #002e60;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+footer a {
+  color: #6aafff;
+}
+footer a:hover {
+  color: #9ecbff;
+}
+.contributors-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+.contributors {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0;
+}
+p {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
 @media (max-width: 650px) {
   .head {
     height: 80px;
@@ -501,5 +531,13 @@ form {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 30px;
     overflow-x: auto;
+  }
+
+  .contributors {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contributors .contributor {
+    margin-bottom: 20px;
   }
 }
