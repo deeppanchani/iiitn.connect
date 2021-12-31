@@ -18,7 +18,7 @@ function singlePersonHandler(person) {
 
   let ProfilePhoto = "https://source.unsplash.com/random5";
   if (person["Profile Photo"]) {
-    ProfilePhoto = person["Profile Photo"];
+     ProfilePhoto = person["Links"];
   }
 
   const LinkedInID = person["LinkedIn ID Link"];
@@ -73,7 +73,7 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
 
     let ProfilePhoto = "https://source.unsplash.com/random5";
     if (person["Profile Photo"]) {
-      ProfilePhoto = person["Profile Photo"];
+      ProfilePhoto = person["Links"];
     }
 
     let skillsHTML = "";
