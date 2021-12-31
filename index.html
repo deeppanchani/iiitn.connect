@@ -22,11 +22,11 @@
   </div>
   <div class="search_bar">
 
-    <form class="" action="index.html" method="post">
+    <form class="" action="index.html" method="post" onsubmit="submitHandler(event)">
       <div class="search-wrapper">
-        <input id="search" type="search" name="" placeholder="Search feature is currently disabled" disabled>
+        <input id="search" type="search" name="" placeholder="Search by name or skill">
         <span id="search_container">
-          <img class="search-bar-icon" src="data/img/search.svg" alt="">
+          <img class="search-bar-icon" id="search-bar-icon" src="data/img/search.svg" alt="">
         </span>
         <span id="filter_container" onclick="filterOpen()">
           <img class="filter-icon" src="data/img/filter.svg" alt="">

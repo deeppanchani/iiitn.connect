@@ -77,6 +77,11 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
     // }
 
     let skillsHTML = "";
+
+    function shuffle(array) {
+      array.sort(() => Math.random() - 0.5);
+    }
+    shuffle(MasteredSkills);
     MasteredSkills.forEach((skill) => {
       skillsHTML += `<span class='skill'>${skill}</span>`;
     });
@@ -268,6 +273,37 @@ const fetchURL = async () => {
       console.log("no");
     }
     console.log(branchValue, yearValue, skillsValue);
+  });
+
+  document.getElementById("search_container").addEventListener("click", () => {
+    const filteredArrayContainer = document.getElementById(
+      "filtered-cards-wrapper"
+    );
+    let filteredArrayHTML = "";
+
+    const input = document.getElementById("search").value;
+    let filteredArray;
+
+    if (input) {
+      filteredArray = data.filter((person) => {
+        return (
+          person.Name.toLowerCase().includes(input.toLowerCase()) ||
+          person.Branch.toLowerCase().includes(input.toLowerCase()) ||
+          person["College Year"].includes(input.toLowerCase()) ||
+          person["Mastered Skills"].includes(input.toLowerCase()) ||
+          (person["Project Links (Optional)"] === undefined
+            ? false
+            : person["Project Links (Optional)"].includes(input.toLowerCase()))
+        );
+      });
+
+      console.log(filteredArray);
+
+      document.getElementById("search").blur();
+      document.getElementById("cards-wrapper").style.display = "none";
+      filteredArrayContainer.style.display = "grid";
+      arrayMapping(filteredArray, filteredArrayContainer, filteredArrayHTML);
+    }
   });
 };
 

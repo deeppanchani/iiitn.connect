@@ -31,3 +31,9 @@ function cancelHandler() {
 
   document.getElementsByClassName("hidden")[0].style.display = "none";
 }
+
+function submitHandler(e) {
+  e.preventDefault();
+  document.getElementById("search-bar-icon").click();
+  console.log(e);
+}
