@@ -158,10 +158,17 @@ form {
 }
 .cards {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 .cards::-webkit-scrollbar {
-  width: 0;
+  height: 8px;
+}
+.cards::-webkit-scrollbar-thumb {
+  background-color: rgba(68, 68, 68, 0.35);
+  border-radius: 5px;
+}
+.cards::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(68, 68, 68, 0.6);
 }
 .card {
   max-width: 300px;
@@ -189,6 +196,9 @@ form {
   text-transform: capitalize;
   color: #fef200;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .info h3 {
   font-size: 17px;
@@ -201,10 +211,13 @@ form {
   overflow: hidden;
 }
 .skill {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 5px 10px;
   background: #feffb1;
   border-radius: 20px;
-  display: inline-flex;
+  display: inline-block;
   border: 1px solid #fef200;
   font-size: 17px;
   color: #002e60;
@@ -359,7 +372,7 @@ form {
     border-radius: 5px;
     outline: unset;
     margin-left: -215px;
-}
+  }
   .hidden input {
     height: 30px;
     width: 190px;
@@ -453,7 +466,8 @@ form {
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 7px rgb(0 0 0 / 60%), inset 3px 3px 4px rgb(0 0 0 / 20%), inset -3px -3px 4px rgb(255 255 255 / 15%);
+    box-shadow: 2px 2px 7px rgb(0 0 0 / 60%), inset 3px 3px 4px rgb(0 0 0 / 20%),
+      inset -3px -3px 4px rgb(255 255 255 / 15%);
     background: #002e60;
   }
   .pfp {
@@ -484,5 +498,5 @@ form {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 30px;
     overflow-x: auto;
-}
+  }
 }

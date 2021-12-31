@@ -166,7 +166,7 @@ const fetchURL = async () => {
     person["Mastered Skills"].includes("UX Design")
   );
   const graphicDesignCards = data.filter((person) =>
-    person["Mastered Skills"].includes("Graphic Design")
+    person["Mastered Skills"].includes("Graphics Design")
   );
   const vidEditCards = data.filter((person) =>
     person["Mastered Skills"].includes("Video Editing")
