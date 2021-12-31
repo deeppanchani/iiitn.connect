@@ -5,6 +5,7 @@
   font-family: "Public Sans";
 }
 
+
 body {
   overflow-x: hidden;
 }
@@ -159,9 +160,11 @@ form {
 .cards {
   display: flex;
   overflow-x: scroll;
+  margin-left: -100px;
+  padding-left: 100px;
 }
 .cards::-webkit-scrollbar {
-  height: 8px;
+  height: 0px;
 }
 .cards::-webkit-scrollbar-thumb {
   background-color: rgba(68, 68, 68, 0.35);

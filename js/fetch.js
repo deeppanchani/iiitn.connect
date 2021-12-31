@@ -17,9 +17,9 @@ function singlePersonHandler(person) {
   });
 
   let ProfilePhoto = "https://source.unsplash.com/random5";
-  // if (person["Profile Photo"]) {
-  //   ProfilePhoto = person["Profile Photo"];
-  // }
+  if (person["Profile Photo"]) {
+     ProfilePhoto = person["Links"];
+  }
 
   const LinkedInID = person["LinkedIn ID Link"];
   const InstagramID = person["Instagram ID Link"];
@@ -72,9 +72,9 @@ function arrayMapping(array, arrayContainer, arrayContainerHTML) {
     const MasteredSkills = person["Mastered Skills"].split(", ");
 
     let ProfilePhoto = "https://source.unsplash.com/random5";
-    // if (person["Profile Photo"]) {
-    //   ProfilePhoto = person["Profile Photo"];
-    // }
+    if (person["Profile Photo"]) {
+      ProfilePhoto = person["Links"];
+    }
 
     let skillsHTML = "";
 
