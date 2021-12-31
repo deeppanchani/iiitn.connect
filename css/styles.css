@@ -168,6 +168,7 @@ form {
   min-width: 300px;
   height: 525px;
   margin-right: 60px;
+  margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6),
@@ -333,7 +334,7 @@ form {
     align-items: center;
     width: 100%;
     background-color: #013976;
-    height: 210px;
+    height: 190px;
     font-size: 1.4rem;
     border-radius: 5px;
     margin-top: 5px;
@@ -350,12 +351,17 @@ form {
     margin-top: 15px;
     font-size: 20px;
   }
+  .hidden div .filter-option-list select {
+    width: 180px;
+    font-size: 17px;
+    border-radius: 5px;
+    outline: unset;
+    margin-left: -215px;
+}
   .hidden input {
     height: 30px;
     width: 190px;
     margin-left: 5px;
-    /* margin-right: 100px; */
-    margin-top: 15px;
     border-radius: 5px;
     border: none;
   }
@@ -401,28 +407,37 @@ form {
     font-size: 1.75rem;
     font-weight: 500;
   }
-
+  #filter-buttons-wrapper {
+    margin-left: -5px;
+    margin-top: 15px;
+  }
+  .filter-enter-button {
+    border: none;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 9px;
+    padding-left: 24px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
   #cancel {
-    width: 130px;
-    height: 35px;
-    margin-left: 75px;
-    margin-top: 20px;
+    width: 100px;
+    height: 30px;
     border: none;
     border-radius: 17.5px;
     background: #feffb1;
     color: #013976;
-    font-size: 0.85em;
+    font-size: 0.75em;
   }
   #apply {
-    width: 130px;
-    height: 35px;
-    margin-left: 50px;
-    /* margin-right: ; */
-    margin-top: 20px;
+    width: 100px;
+    height: 30px;
     border: none;
     border-radius: 17.5px;
     background-color: #fef200;
     color: #013976;
-    font-size: 0.85em;
+    font-size: 0.75em;
   }
+
+
 }
