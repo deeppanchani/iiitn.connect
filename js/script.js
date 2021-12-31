@@ -30,6 +30,8 @@ function cancelHandler() {
   document.getElementById("skills-list").value = "";
 
   document.getElementsByClassName("hidden")[0].style.display = "none";
+  document.getElementById("filtered-cards-wrapper").style.display = "none";
+  document.getElementById("cards-wrapper").style.display = "block";
 }
 
 function submitHandler(e) {
