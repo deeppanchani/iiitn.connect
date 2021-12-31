@@ -292,7 +292,9 @@ form {
 
 #filtered-cards-wrapper {
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 40px 150px;
+  overflow-x: auto;
+  margin-left: 158px;
+  margin-top: 60px;
 }
 #filtered-cards-wrapper .cards {
   margin: auto;
