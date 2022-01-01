@@ -253,7 +253,6 @@ form {
 }
 .single-person-wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   width: 800px;
   margin: 100px auto;
