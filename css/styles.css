@@ -325,10 +325,6 @@ footer {
   justify-content: center;
   align-items: center;
   color: #fff;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
 footer a {
   color: #6aafff;
