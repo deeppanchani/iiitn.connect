@@ -45,7 +45,7 @@ function singlePersonHandler(person) {
   section.style.display = "block";
 
   section.innerHTML = `<div class='single-person-wrapper'>
-  <span class="close-section" onclick="closeSinglePersonSection()">close</span>
+  <span class="close-section" onclick="closeSinglePersonSection()"><img src="data/img/close.svg" alt="close"></span>
   <div class='left-section'>
   <div class='person-img' style='background-image:url(${ProfilePhoto});background-size:cover;background-position:center;'></div>
   <div class='person-profiles'>
