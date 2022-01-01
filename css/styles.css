@@ -164,7 +164,7 @@ form {
   padding-left: 100px;
 }
 .cards::-webkit-scrollbar {
-  height: 0px;
+  height: 8px;
 }
 .cards::-webkit-scrollbar-thumb {
   background-color: rgba(68, 68, 68, 0.35);
@@ -563,5 +563,8 @@ p {
   }
   .left-section{
     max-width: 300px;
+  }
+  .cards::-webkit-scrollbar {
+    height: 0px;
   }
 }
