@@ -23,11 +23,12 @@ function singlePersonHandler(person) {
 
   const LinkedInID = person["LinkedIn ID Link"];
   const InstagramID = person["Instagram ID Link"];
-  let socialLinksHTML = `<a href='${LinkedInID}' class='social-media-icon'></a><a href='${InstagramID}' class='social-media-icon'></a>`;
+  let socialLinksHTML = `<a href='${LinkedInID}' class='social-media-icon'><img src="/data/img/linkedin.svg" alt="instagram link" width="40" height="40"></a><a href='${InstagramID}' class='social-media-icon'><img src="/data/img/instagram.svg" alt="instagram link" width="40" height="40"></a>`;
+
 
   if (person["GitHub ID Link (Optional)"]) {
     const GithubID = person["GitHub ID Link (Optional)"];
-    socialLinksHTML += `<a href='${GithubID}' class='social-media-icon'></a>`;
+    socialLinksHTML += `<a href='${GithubID}' class='social-media-icon'><img src="/data/img/github.svg" alt="instagram link" width="40" height="40"></a>`;
   }
   if (person["Other Social Links (Optional)"]) {
     const OtherID = person["Other Social Links (Optional)"];

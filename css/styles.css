@@ -347,6 +347,7 @@ p {
   opacity: 0.7;
 }
 
+
 @media (max-width: 650px) {
   .head {
     height: 80px;
